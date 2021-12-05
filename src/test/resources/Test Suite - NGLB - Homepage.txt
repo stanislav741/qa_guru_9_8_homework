@@ -1,7 +1,7 @@
 #1.1
 Title: NGLB - DE - Homepage availability
 Priority: High
-Precondition: The website language is set to EN
+Precondition: The homepage URL is set to DE
 
 Steps:
 1. Open the homepage
@@ -11,7 +11,7 @@ Expected result: Homepage is opened
 #1.2
 Title: NGLB - EN - Homepage availability
 Priority: High
-Precondition: The website language is set to EN
+Precondition: The homepage URL is set to EN
 
 Steps:
 1. Open the homepage
@@ -21,8 +21,8 @@ Expected result: Homepage is opened
 **********
 #2.1
 Title: NGLB - DE - Homepage - Intro text availability
-Priority: High
-Precondition: The website language is set to DE
+Priority: Medium
+Precondition: The homepage URL is set to DE
 
 Steps:
 1. Open the homepage
@@ -31,8 +31,8 @@ Expected result: Homepage is available, "Hallo. Wir sind Neugelb" text is visibl
 
 #2.2
 Title: NGLB - EN - Homepage - Intro text availability
-Priority: High
-Precondition: The website language is set to EN
+Priority: Medium
+Precondition: The homepage URL is set to EN
 
 Steps:
 1. Open the homepage
@@ -41,20 +41,9 @@ Expected result: Homepage is available, "Hello. We are Neugelb" text is visible
 
 **********
 #3.1
-Title: NGLB - EN - Homepage - Cookies consent accept
-Priority: Medium
-Precondition: The website language is set to EN
-
-Steps:
-1. Open the homepage
-2. On the home page, click on the "Accept" button on the "Management Consent" section
-
-Expected result: "Accept" button is clickable, "Management Consent" banner is closed
-
-#3.2
 Title: NGLB - DE - Homepage - Cookies consent accept
-Priority: Medium
-Precondition: The website language is set to DE
+Priority: Low
+Precondition: The homepage URL is set to DE
 
 Steps:
 1. Open the homepage
@@ -62,23 +51,22 @@ Steps:
 
 Expected result: "Akzeptieren" button is clickable, "Einwilligung verwalten" banner is closed
 
-**********
-#4.1
-Title: NGLB - EN - Homepage - Hamburger menu - Items availability
-Priority: High
-Precondition: The website language is set to EN
+#3.2
+Title: NGLB - DE - Homepage - Cookies consent accept
+Priority: Low
+Precondition: The homepage URL is set to EN
 
 Steps:
 1. Open the homepage
-2. On the home page, click on the hamburger menu button at the top right corner
-3. In the opened hamburger menu, check the list of available menu items
+2. On the home page, click on the "Accept" button on the "Management Consent" section
 
-Expected result: The following menu items are available: Home, About Us, Team & Career, Case Studies, Contact
+Expected result: "Accept" button is clickable, "Management Consent" banner is closed
 
-#4.2
+**********
+#4.1
 Title: NGLB - DE - Homepage - Hamburger menu - Items availability
 Priority: High
-Precondition: The website language is set to DE
+Precondition: The homepage URL is set to DE
 
 Steps:
 1. Open the homepage
@@ -86,3 +74,40 @@ Steps:
 3. In the opened hamburger menu, check the list of available menu items
 
 Expected result: The following menu items are available: Home, Über Uns, Team & Karriere, Case Studies, Kontakt
+
+#4.2
+Title: NGLB - EN - Homepage - Hamburger menu - Items availability
+Priority: High
+Precondition: The homepage URL is set to EN
+
+Steps:
+1. Open the homepage
+2. On the homepage, click on the hamburger menu button at the top right corner
+3. In the opened hamburger menu, check the list of available menu items
+
+Expected result: The following menu items are available: Home, About Us, Team & Career, Case Studies, Contact
+
+**********
+#5.1
+Title: NGLB - DE - Homepage - Hamburger menu - Language switcher availability
+Priority: Low
+Precondition: The homepage URL is set to DE
+
+Steps:
+1. Open the homepage
+2. On the homepage, click on the hamburger menu button at the top right corner
+3. In the opened hamburger menu, check if the language switch button is available at the top right corner
+
+Expected result: "EN" language switch button is available
+
+#5.2
+Title: NGLB - EN - Homepage - Hamburger menu - Language switcher availability
+Priority: Low
+Precondition: The homepage URL is set to EN
+
+Steps:
+1. Open the homepage
+2. On the homepage, click on the hamburger menu button at the top right corner
+3. In the opened hamburger menu, check if the language switch button is available at the top right corner
+
+Expected result: "DE" language switch button is available
