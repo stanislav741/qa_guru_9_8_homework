@@ -1,10 +1,8 @@
 package tests;
 
-import com.sun.org.apache.xpath.internal.Arg;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Tag;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
@@ -16,6 +14,8 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class HomepageTest {
+    String varBaseURL = "https://neugelb.com";
+    
 //TC #1.1, #1.2
     @ParameterizedTest(name = "#1 - NGLB - Homepage - {0} availability")
     @Order(1)
@@ -23,7 +23,7 @@ public class HomepageTest {
     @DisplayName("Test Suite - NGLB - Homepage")
     @Tag("High")
     void homepageOpen(String homeURL) {
-        open("https://neugelb.com" + homeURL);
+        open(varBaseURL + homeURL);
     }
 
 //TC #2.1, #2.2
@@ -35,7 +35,7 @@ public class HomepageTest {
     @DisplayName("Test Suite - NGLB - Homepage")
     @Tag("Medium")
     void homepageOpenIntro(String homeURL, String introText) {
-        open("https://neugelb.com" + homeURL);
+        open(varBaseURL + homeURL);
         $(byText(introText)).should(exist);
     }
 
@@ -52,7 +52,7 @@ public class HomepageTest {
     @DisplayName("Test Suite - NGLB - Homepage")
     @Tag("Low")
     void cookiesConsent(String homeURL, String consentTitle, String consentButton) {
-        open("https://neugelb.com" + homeURL);
+        open(varBaseURL + homeURL);
         $(byText(consentTitle)).should(exist);
         $(byText(consentButton)).click();
 
@@ -65,7 +65,7 @@ public class HomepageTest {
     @DisplayName("Test Suite - NGLB - Homepage")
     @Tag("Low")
     void menuItemsCheck(String homeURL, String home, String aboutUs, String teamAndCareer, String caseStudies, String contact) {
-        open("https://neugelb.com" + homeURL);
+        open(varBaseURL + homeURL);
         $(".Burger__BurgerContainer-sc-58me4m-0").click();
         $(".Menu__ListContainer-sc-23iy1o-1").shouldHave(text(home));
         $(".Menu__ListContainer-sc-23iy1o-1").shouldHave(text(aboutUs));
@@ -83,7 +83,7 @@ public class HomepageTest {
     @Tag("Low")
     void languageSwitcherCheck(LanguageSwitcher languageSwitcher) {
 
-        open("https://neugelb.com" + languageSwitcher.getUrl());
+        open(varBaseURL + languageSwitcher.getUrl());
         $(".Burger__BurgerContainer-sc-58me4m-0").click();
         $(".language-switch").shouldHave(text(languageSwitcher.getTitle()));
     }
