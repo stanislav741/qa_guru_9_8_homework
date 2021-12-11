@@ -1,7 +1,6 @@
 package tests;
 
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
@@ -18,7 +17,6 @@ public class HomepageTest {
     
 //TC #1.1, #1.2
     @ParameterizedTest(name = "#1 - NGLB - Homepage - {0} availability")
-    @Order(1)
     @ValueSource(strings = {"/de/home/", "/en/home/"})
     @DisplayName("Test Suite - NGLB - Homepage")
     @Tag("High")
@@ -28,7 +26,6 @@ public class HomepageTest {
 
 //TC #2.1, #2.2
     @ParameterizedTest(name = "#2 NGLB - Homepage - {0} - {1} Intro text availability")
-    @Order(2)
     @CsvSource({
             "/de/home/, Hallo. Wir sind Neugelb",
             "/en/home/, Hello. We are Neugelb"})
@@ -47,7 +44,6 @@ public class HomepageTest {
         );
     }
     @ParameterizedTest(name = "#3 NGLB - Homepage - {0} - {1} {2}")
-    @Order(3)
     @MethodSource("cookiesConsentElements")
     @DisplayName("Test Suite - NGLB - Homepage")
     @Tag("Low")
@@ -60,7 +56,6 @@ public class HomepageTest {
 
 //TC #4.1, #4.2
     @ParameterizedTest(name = "#4 NGLB - Homepage - {0} - Menu items availability")
-    @Order(4)
     @CsvFileSource(resources = "/menuitems.csv")
     @DisplayName("Test Suite - NGLB - Homepage")
     @Tag("Low")
@@ -77,7 +72,6 @@ public class HomepageTest {
 //TC #5.1, #5.2
 //Я не до конца понял как работает параметризация через Enum. Решение было скопировано у одного из других учеников. См. дополнительную информацию в tests/LanguageSwitcher.java
     @ParameterizedTest(name = "#5 NGLB - Homepage - {0} language switcher availability")
-    @Order(5)
     @EnumSource(LanguageSwitcher.class)
     @DisplayName("Test Suite - NGLB - Homepage")
     @Tag("Low")
