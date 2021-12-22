@@ -70,7 +70,6 @@ public class HomepageTest {
     }
 
 //TC #5.1, #5.2
-//Я не до конца понял как работает параметризация через Enum. Решение было скопировано у одного из других учеников. См. дополнительную информацию в tests/LanguageSwitcher.java
     @ParameterizedTest(name = "#5 NGLB - Homepage - {0} language switcher availability")
     @EnumSource(LanguageSwitcher.class)
     @DisplayName("Test Suite - NGLB - Homepage")

@@ -4,19 +4,19 @@
 package tests;
 
 public enum LanguageSwitcher {
-    DE("/de/home/", "EN"), //непонятно почему именно так, в скобках, устроено перечисление параметров. На уроке про это не было рассказано
+    DE("/de/home/", "EN"),
     EN("/en/home/", "DE");
 
-    private String url;             //Здесь объявляются переменные, это вроде понятно
+    private String url;
     private String title;
 
-    LanguageSwitcher(String url, String title)      //Для чего нужен этот метод? Чтобы связать переменные со значениями из enum? Почему он объявлен именно таким образом, без void?
+    LanguageSwitcher(String switchUrl, String switchTitle)
     {
-        this.url = url;                             //Для чего здесь кейворд this?
-        this.title = title;
+        this.url = switchUrl;
+        this.title = switchTitle;
     }
 
-    public String getUrl() {                        //Эти методы будут испоьзованы для передачи значений наших параметров в формате String. Это вроде понятно
+    public String getUrl() {
         return url;
     }
 
