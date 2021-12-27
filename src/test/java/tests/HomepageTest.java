@@ -75,10 +75,8 @@ public class HomepageTest {
     @DisplayName("Test Suite - NGLB - Homepage")
     @Tag("Low")
     void languageSwitcherCheck(LanguageSwitcher languageSwitcher) {
-
         open(varBaseURL + languageSwitcher.getUrl());
         $(".Burger__BurgerContainer-sc-58me4m-0").click();
         $(".language-switch").shouldHave(text(languageSwitcher.getTitle()));
     }
-
 }

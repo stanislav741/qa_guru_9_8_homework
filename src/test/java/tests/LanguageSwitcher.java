@@ -7,10 +7,10 @@ public enum LanguageSwitcher {
     private String url;
     private String title;
 
-    LanguageSwitcher(String switchUrl, String switchTitle)
+    LanguageSwitcher(String switcherUrl, String switcherTitle)
     {
-        url = switchUrl;
-        title = switchTitle;
+        url = switcherUrl;
+        title = switcherTitle;
     }
 
     public String getUrl() {
