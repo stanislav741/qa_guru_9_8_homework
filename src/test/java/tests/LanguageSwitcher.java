@@ -1,6 +1,3 @@
-// структура этого файла была скопирована отсюда:
-// https://github.com/elenaAeternanox/qa_quru_eighth_homework/blob/main/src/test/java/com/github/elenaAeternanox/eighthHomeWork/GoodsList.java
-// мне непонятно для чего используется именно такая структура? Чтобы сконвертировать все значения enum в String, при выполнении нашего теста?
 package tests;
 
 public enum LanguageSwitcher {
@@ -12,8 +9,8 @@ public enum LanguageSwitcher {
 
     LanguageSwitcher(String switchUrl, String switchTitle)
     {
-        this.url = switchUrl;
-        this.title = switchTitle;
+        url = switchUrl;
+        title = switchTitle;
     }
 
     public String getUrl() {
